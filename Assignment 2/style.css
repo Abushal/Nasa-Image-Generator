@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main white card */
+.container {
+  background-color: #ffffff;
+  padding: 25px 30px;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  width: 520px;
+  max-width: 95%;
+}
+
+h1 {
+  font-size: 22px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Form */
+form {
+  margin-bottom: 8px;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+/* Date input + button on one row */
+.input-row {
+  display: flex;
+  gap: 6px;
+}
+
+#apod-date-input {
+  flex: 1;
+  padding: 7px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  font-size: 13px;
+}
+
+/* Main blue button */
+button {
+  padding: 7px 12px;
+  border-radius: 3px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+button:hover {
+  background-color: #0069d9;
+}
+
+/* Status message */
+.status {
+  font-size: 12px;
+  color: #555;
+  margin-top: 4px;
+  min-height: 16px;
+  text-align: center;
+}
+
+.status.error {
+  color: #c0392b;
+}
+
+/* Results card */
+.results-card {
+  margin-top: 12px;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+  background-color: #fafafa;
+  padding: 10px;
+  display: none; /* hidden at first */
+}
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  padding: 8px;
+  background-color: transparent;
+  border: none;
+}
+
+
+.image-wrapper img {
+  max-width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+}
+
+/* Info text */
+.info p {
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+#apod-description {
+  margin-top: 4px;
+  text-align: justify;
+}
+
+/* History section */
+.history {
+  margin-top: 12px;
+  padding-top: 8px;
+  border-top: 1px solid #ddd;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#history-list {
+  list-style: none;
+  margin-top: 6px;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* Each viewed date as a pill */
+#history-list li {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 999px;
+  padding: 3px 8px;
+  font-size: 12px;
+}
+
+/* Small red button for "Clear list" */
+.small-btn {
+  padding: 3px 8px;
+  border-radius: 3px;
+  border: none;
+  background-color: #dc3545;
+  color: #fff;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.small-btn:hover {
+  background-color: #c82333;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>NASA Image of the Day</title>
+
+  <!-- Load CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>NASA Image of the Day</h1>
+    <p class="subtitle">
+      Choose a date and fetch NASA’s Astronomy Picture of the Day using their public API.
+    </p>
+
+    <!-- Form -->
+    <form id="apod-form">
+      <label for="apod-date-input">Select a date:</label>
+
+      <div class="input-row">
+        <input type="date" id="apod-date-input" required>
+        <button type="submit">Get NASA Image</button>
+      </div>
+    </form>
+
+    <p class="status" id="status"></p>
+
+    <!-- Results card -->
+    <div class="results-card" id="results-card">
+
+      <!-- Centered image -->
+      <div class="image-wrapper">
+        <img id="apod-image" alt="NASA Astronomy Picture of the Day">
+      </div>
+
+      <!-- Info text -->
+      <div class="info">
+        <p><span class="label">Title:</span> <span id="apod-title">—</span></p>
+        <p><span class="label">Date:</span> <span id="apod-date">—</span></p>
+        <p><span class="label">Copyright:</span> <span id="apod-copy">—</span></p>
+
+        <p><span class="label">Description:</span></p>
+        <p id="apod-description">—</p>
+      </div>
+
+      <!-- Viewed history -->
+      <div class="history">
+        <div class="history-header">
+          <p class="label">Viewed dates (last 5):</p>
+          <button type="button" id="clear-history-btn" class="small-btn">Clear list</button>
+        </div>
+
+        <ul id="history-list"></ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Load JS -->
+  <script src="script.js"></script>
+</body>
+</html>
